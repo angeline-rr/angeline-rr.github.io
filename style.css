@@ -1,0 +1,21 @@
+.home {
+    background: linear-gradient(to bottom, #bad59c 50%, #d8d8d8 50%);
+    height: 120vh; 
+    margin: 0; 
+    
+}
+.centro {
+    background: linear-gradient(to bottom, #ee9196 50%, #fcfbf2 50%);
+    height: 100vh;
+    margin-top: 67px;
+    width: 90%; 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center; /
+}
+
+/*<img src="moranguinho-no-morango.png" alt="Moranguinho dando boas vindas" style="width: 100px; height: 90px;">
