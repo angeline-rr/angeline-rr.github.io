@@ -15,7 +15,20 @@
     transform: translate(-50%, -50%); 
     display: flex;
     justify-content: center;
-    align-items: center; /
+    align-items: center; 
 }
-
+a {
+    color: #536944;
+    text-decoration: none;
+}
+a:visited{
+    color: #6a1132;
+}
+a:hover {
+    color: #41081d;
+}
+ul {
+    margin-top: 300px;
+    list-style: none;
+}
 /*<img src="moranguinho-no-morango.png" alt="Moranguinho dando boas vindas" style="width: 100px; height: 90px;">
