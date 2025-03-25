@@ -1,0 +1,72 @@
+* {
+    color: white;
+    font-family: "Georgia", serif;
+}
+body {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.home{
+    background-image: url("background.png");
+}
+.header {
+    background-color: rgb(8, 8, 175);
+    height: 80px;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subheader {
+    background-color: rgb(181, 227, 238);
+    height: 20px;
+}
+.headerlist {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+a {
+    text-decoration: none; 
+}
+a i {
+    color: white;
+}
+
+a:hover i{
+    color: rgb(181, 227, 238);
+}
+a:hover span {
+    color: rgb(181, 227, 238);
+    font-size: 18px; 
+    
+}
+.headerline{
+    align-items: center;
+    border-left: 3px solid white;
+    padding-right: 100px;
+}
+.headerline:hover {
+    border-left-color: rgb(181, 227, 238);
+}
+span {
+    padding: 5px;
+    border-right-color: white;
+    border-right-style: solid; 
+}
+span:hover {
+    border-right-color: rgb(181, 227, 238);
+}
+h1, h3 {
+    color:rgb(8, 8, 175);
+}
+li{
+    color:rgb(8, 8, 175);
+}
+
+

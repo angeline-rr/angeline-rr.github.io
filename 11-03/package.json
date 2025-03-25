@@ -1,0 +1,23 @@
+{
+  "name": "primeira-atividade",
+  "version": "1.0.0",
+  "description": "\"# desenvolvimento_web11-03\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeline-rr/desenvolvimento_web11-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angeline-rr/desenvolvimento_web11-03/issues"
+  },
+  "homepage": "https://github.com/angeline-rr/desenvolvimento_web11-03#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

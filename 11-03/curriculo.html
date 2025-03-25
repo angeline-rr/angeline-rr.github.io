@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculo</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            padding: 2px 5px;
+            margin: 0;
+            vertical-align: top;
+        }
+
+        h1, h5, h2, h3{
+            margin: 0;
+            padding: 2px 0;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <hr />
+    <!-- dados pessoais -->
+    <table>
+        <tr>
+            <td>
+                <img src="loopythebeaverwithglasses.jpg"
+                    width="300" height="250" />
+            </td>
+            <td>
+                <hr />
+                <h1><u><b>DADOS PESSOAIS</b></u></h1>
+                <table>
+                    <tr>
+                        <td>
+                            <h5><b>Nome: </b>Angeline Rudnik</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><b>Data de Nasc.: </b>05/09/2007</h5>
+                        </td>
+                        <td>
+                            <h5><b>Estado Civil: </b>Solteiro </h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><b>Endereço: </b>Rua Rodrigues de Figueiredo</h5>
+                        </td>
+                        <td>
+                            <h5><b>Número: </b>245</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><b>Bairro: </b>Centro</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><b>Cidade: </b>Matinhos</h5>
+                        </td>
+                        <td>
+                            <h5><b>CEP: </b>83.260-000</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><b>CPF: </b>505.505.505-55</h5>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+            </td>
+    </table>
+    <hr />
+    <!-- qualificaçao profissional -->
+    <h1><b>QUALIFICAÇÃO PROFISSIONAL</b></h1>
+    <ul>
+        <li><b>Áreas de atuação: </b> Linguagens de Programação - Engenharia de Software -
+            Banco de Dados - Projetos e Desenvolvimento de Software</li>
+        <hr />
+        <li><b>Tecnologias: </b> Linguagem Java - Linguagem C -
+            Framework Flutter - Banco de Dados MySQL</li>
+    </ul>
+    <!-- formaçao academica -->
+    <h2><b>FORMAÇÃO ACADÊMICA</b></h2>
+    <ol>
+        <li>
+            <b>Ensino Médio Técnico:</b> Informática
+            <ul>
+                <li>
+                    <u>Instituição:</u> Institudo Federal do Paraná - Campus Paranaguá
+                </li>
+                <li>
+                    <u>Data de Início:</u> 06/03/2023
+                </li>
+                <li>
+                    <u>Data de Conclusão:</u> 31/12/2026
+                </li>
+                <li>
+                    <u>Disciplinas:</u> Linguagem de Programação, Algoritmos,
+                     Arquitetura e Organização de Computadores e Sistemas Operacionais,
+                     Orientação a Objetos, Banco de Dados, Engenharia de Software, Introdução a Redes, Desenvolvimento Web,
+                     Empreendedorismo, Tópicos Avançados de TI, Metodologia Científica
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr />
+    <!-- formulário -->
+    <h3><b>FORMULÁRIO DE CONTATO</b></h3>
+
+    <form action="http://localhost:3000/curriculo" method="POST">
+        <tabLe>
+            <tr>
+                <td>
+                    <h5><b>Assunto:</b></h5>
+                </td>
+                <td>
+                    <input type="radio" name="assunto" value="duvidas" checked> Dúvidas
+                    <input type="radio" name="assunto" value="infos"> Mais Informações
+                    <input type="radio" name="assunto" value="contratacao"> Contratação
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5><b>Nome:</b></h5>
+                </td>
+                <td>
+                    <input type="text" id="nome" name="nome">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5><b>Email:</b></h5>
+                </td>
+                <td>
+                    <input type="email" id="email" name="email">
+                </td>
+            </tr>
+        </tabLe>
+        <hr>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
