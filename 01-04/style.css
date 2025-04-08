@@ -1,0 +1,135 @@
+body {
+    background-color: aliceblue;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+        'topo topo topo'
+        'menu conteudo conteudo'
+        'rodape rodape rodape';
+}
+
+
+header {
+    grid-area: topo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+    position: relative;
+    top: 50px;
+    grid-area: menu;
+}
+
+
+main {
+    background-color: pink;
+    grid-area: conteudo;
+    display: flex;
+    align-items: center;
+}
+
+
+footer {
+    grid-area: rodape;
+}
+
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
+
+
+.name {
+    text-align: center;
+    font-size: 40px;
+    font-family: Georgia;
+    color: rgb(16, 13, 65);
+}
+
+
+.icon-menu {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    visibility: hidden;
+}
+
+
+h4 {
+    height: 30px;
+    text-align: center;
+    color: rgb(205, 218, 255);
+    list-style-type: none;
+    background-color: rgb(33, 69, 100);
+    box-shadow: 5px 5px 3px rgb(6, 6, 54);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+
+
+.list-item {
+    background-color: rgb(92, 116, 138);
+    box-shadow: 5px 5px rgb(26, 26, 63);
+    position: relative;
+    left: 15px;
+    width: 150px;
+}
+
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+
+    .icon-menu {
+        visibility: visible;
+    }
+
+
+    body {
+        grid-template-areas:
+            'topo topo topo'
+            'conteudo conteudo conteudo'
+            'rodape rodape rodape';
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .name {
+        font-size: 35px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .name {
+        font-size: 30px;
+    }
+    img {
+        height: 70px;
+        width: 70px;    
+    }
+    .icon-menu {
+        font-size: smaller;
+    }
+}
+
