@@ -148,19 +148,138 @@ tr {
 #plane1 {
   position: absolute;
   bottom: 15px;
-  right: -10px;
+  right: 10px;
   transform: rotate(-90deg);
-  animation: moverLeft 10s linear 1s infinite;
+  animation: moveRight 4s linear infinite;
 }
 
 #plane2 {
   position: absolute;
-  bottom: 50px;
-  right: -10px;
-  animation: mover 35s ease 1s infinite;
-  
+  bottom: 15px;
+  left: 10px;
+  transform: rotate(90deg);
+  animation: moveLeft 4s linear infinite;
 }
-@keyframes moverLeft {
-  25% { right: -100px; }
-  50% { right: 400px; }
+
+@keyframes moveRight {
+  0% {
+    right: 0;
+    transform: rotate(-90deg);
+  }
+
+  25% {
+    right: 150px;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    right: 300px;
+    transform: translateX(-200px) rotate(-90deg);
+  }
+
+  75% {
+    right: 600px;
+    transform: rotate(90deg);
+  }
+
+  90% {
+    right: 200px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    right: 10px;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 0;
+    transform: rotate(90deg);
+  }
+
+  25% {
+    left: 150px;
+    transform: rotate(90deg);
+  }
+
+  50% {
+    left: 300px;
+    transform: translateX(200px) rotate(90deg);
+  }
+
+  75% {
+    left: 600px;
+    transform: rotate(-90deg);
+  }
+
+  90% {
+    left: 200px;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    left: 10px;
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 1058px) {
+
+  #title1,
+  #title2 {
+    font-size: 24px
+  }
+
+  #image {
+    display: inline;
+    margin: 5px; 
+  }
+
+  #title1 {
+    right: 30px
+  }
+  #title2 {
+    left: 30px
+  }
+
+  #title-main {
+    font-size: 32px
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .col1 {
+    display: none;
+  }
+
+  #title1,
+  #title2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #logo {
+    width: 65px;
+    height: 65px;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .col2 {
+    display: none;
+  }
+
+  #title1,
+  #title2 {
+    font-size: 14px;
+    text-align: center;
+  }
+  #title-main {
+    font-size: 22px;
+    left:150px
+  }
 }
