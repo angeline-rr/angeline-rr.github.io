@@ -54,7 +54,7 @@ body {
     z-index: 1;
     position: absolute;
     top: 25px;
-    transform: translateY(40px);
+    transition: transform 0.1s linear;
 }
 #missil1 {
     left: 3px;

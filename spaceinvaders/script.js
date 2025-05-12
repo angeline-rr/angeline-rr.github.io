@@ -79,9 +79,36 @@ document.addEventListener("keydown", function (event) {
         atirar();
     }
 });
-function atirar(){
-    
-}
+function atirar() {
+    let missil1 = document.getElementById("missil1");
+    let missil2 = document.getElementById("missil2");
 
+    let flag = 0;
+    console.log("entrou");
+
+    let posicaoMissil1 = 0;
+    let posicaoMissil2 = 0;
+
+    const animacao = setInterval(() => {
+        posicaoMissil1 -= 100;
+        posicaoMissil2 -= 100;
+
+        while (flag == 0) {
+            missil1.style.transform = `translateY(${posicaoMissil1}px)`;
+            if (posicaoMissil1 < -500) {
+                clearInterval(animacao);
+                flag = 1;
+            }
+        }
+        while (flag == 1) {
+            missil2.style.transform = `translateY(${posicaoMissil2}px)`;
+            if (posicaoMissil2 < -500) {
+                clearInterval(animacao);
+                flag = 0;
+            }
+
+        }
+    }, 1000);
+}
 
 //const maximo = window.innerWidth - nav.offsetWidth; // limite direito
