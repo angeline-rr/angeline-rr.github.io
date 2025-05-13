@@ -76,12 +76,12 @@ document.addEventListener("keydown", function (event) {
     }
     //atirar
     if (event.code === "Enter") {
-        atirarMissil1();
+        atirar();
     }
 });
 let flag = 0;
 
-function atirarMissil1() {
+function atirar() {
     const missil1 = document.getElementById("missil1");
     const missil2 = document.getElementById("missil2");
     const nave = document.getElementById("naveContainer");
@@ -105,7 +105,7 @@ function atirarMissil1() {
                 clearInterval(animacao);
                 flag = 1;
             }
-        }, 100);
+        }, 30);
     } else if (flag == 1) {
         let posicaoMissil2 = posicaoTop;
 
@@ -122,14 +122,12 @@ function atirarMissil1() {
                 clearInterval(animacao);
 
                 nave.appendChild(missil1);
-                missil1.style.position = "absolute";
                 missil1.style.left = "3px";
                 missil1.style.bottom = "1vh";
                 missil1.style.top = "";
                 missil1.style.right = "";
 
                 nave.appendChild(missil2);
-                missil2.style.position = "absolute";
                 missil2.style.right = "3px";
                 missil2.style.bottom = "1vh";
                 missil2.style.top = "";
@@ -137,7 +135,7 @@ function atirarMissil1() {
 
                 flag = 0;
             }
-        }, 100);
+        }, 30);
     }
 }
 //const maximo = window.innerWidth - nav.offsetWidth; // limite direito
