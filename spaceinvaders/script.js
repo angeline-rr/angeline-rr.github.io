@@ -121,7 +121,6 @@ function atirarMissil1() {
             if (posicaoMissil2 < 1) {
                 clearInterval(animacao);
 
-                // Volta os mísseis para dentro da nave
                 nave.appendChild(missil1);
                 missil1.style.position = "absolute";
                 missil1.style.left = "3px";
