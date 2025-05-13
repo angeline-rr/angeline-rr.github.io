@@ -53,8 +53,8 @@ function stopCounter() {
 let nav = document.getElementById("naveContainer");
 let pos = parseInt(window.getComputedStyle(nav).left);
 const mover = 20;
-const minimo = 300;
-const maximo = 1250;
+const minimo = 50;
+const maximo = 1000;
 
 document.addEventListener("keydown", function (event) {
     //tempo
@@ -76,39 +76,69 @@ document.addEventListener("keydown", function (event) {
     }
     //atirar
     if (event.code === "Enter") {
-        atirar();
+        atirarMissil1();
     }
 });
-function atirar() {
-    let missil1 = document.getElementById("missil1");
-    let missil2 = document.getElementById("missil2");
+let flag = 0;
 
-    let flag = 0;
-    console.log("entrou");
+function atirarMissil1() {
+    const missil1 = document.getElementById("missil1");
+    const missil2 = document.getElementById("missil2");
+    const nave = document.getElementById("naveContainer");
 
-    let posicaoMissil1 = 0;
-    let posicaoMissil2 = 0;
+    const posicaoLeft = nave.offsetLeft;
+    const posicaoTop = nave.offsetTop;
 
-    const animacao = setInterval(() => {
-        posicaoMissil1 -= 100;
-        posicaoMissil2 -= 100;
+    if (flag == 0) {
+        let posicaoMissil1 = posicaoTop;
 
-        while (flag == 0) {
-            missil1.style.transform = `translateY(${posicaoMissil1}px)`;
-            if (posicaoMissil1 < -500) {
+        document.body.appendChild(missil1);
+        missil1.style.position = "absolute";
+        missil1.style.left = posicaoLeft + "px";
+        missil1.style.top = posicaoMissil1 + "px";
+
+        const animacao = setInterval(() => {
+            posicaoMissil1 -= 20;
+            missil1.style.top = posicaoMissil1 + "px";
+
+            if (posicaoMissil1 < 1) {
                 clearInterval(animacao);
                 flag = 1;
             }
-        }
-        while (flag == 1) {
-            missil2.style.transform = `translateY(${posicaoMissil2}px)`;
-            if (posicaoMissil2 < -500) {
+        }, 100);
+    } else if (flag == 1) {
+        let posicaoMissil2 = posicaoTop;
+
+        document.body.appendChild(missil2);
+        missil2.style.position = "absolute";
+        missil2.style.left = (posicaoLeft + 50) + "px";
+        missil2.style.top = posicaoMissil2 + "px";
+
+        const animacao = setInterval(() => {
+            posicaoMissil2 -= 20;
+            missil2.style.top = posicaoMissil2 + "px";
+
+            if (posicaoMissil2 < 1) {
                 clearInterval(animacao);
+
+                // Volta os mísseis para dentro da nave
+                nave.appendChild(missil1);
+                missil1.style.position = "absolute";
+                missil1.style.left = "3px";
+                missil1.style.bottom = "1vh";
+                missil1.style.top = "";
+                missil1.style.right = "";
+
+                nave.appendChild(missil2);
+                missil2.style.position = "absolute";
+                missil2.style.right = "3px";
+                missil2.style.bottom = "1vh";
+                missil2.style.top = "";
+                missil2.style.left = "";
+
                 flag = 0;
             }
-
-        }
-    }, 1000);
+        }, 100);
+    }
 }
-
 //const maximo = window.innerWidth - nav.offsetWidth; // limite direito
