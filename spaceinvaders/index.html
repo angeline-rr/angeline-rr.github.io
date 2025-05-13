@@ -9,14 +9,19 @@
     <title>Spacer Invaders</title>
 </head>
 
-<body onload="startCounter()">
+<body onload="startCounter(); criarAliens()">
     <div class="panel">
         <img src="/spaceinvaders/images/clock.png">
         <p id="timer">00:00:00</p>
         <img src="/spaceinvaders/images/nave.png">
-        <p>LIFE: 3</p>
+        <p id="lifeText">LIFE: 3</p>
         <img src="/spaceinvaders/images/alien.png">
         <p>ALIENS: 0</p>
+    </div>
+    <div id="alienContainer">
+        <img class="alien" id ="alien1" src="images/alien.png">
+        <img class="alien" id ="alien2" src="images/alien.png">
+        <img class="alien" id ="alien3" src="images/alien.png">
     </div>
     <div id="pause">
         <h1>GAME PAUSED</h1>
