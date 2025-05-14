@@ -33,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 40px;
 }
 
 #naveContainer {
@@ -58,24 +59,26 @@ body {
   top: 25px;
   bottom: 1vh;
 }
+
 #missil1 {
   left: 3px;
 }
+
 #missil2 {
   right: 3px;
 }
 
 #alienContainer {
-    top: 0px;
-    width: 300px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    gap: 10px;
-    left: 550px;
+  top: 0px;
+  width: 300px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  gap: 10px;
+  left: 550px;
 }
+
 .alien {
   position: relative;
   height: 100px;
