@@ -9,6 +9,7 @@ $fonte: "'Courier New', Courier, monospace";
 }
 
 body {
+    overflow-x: hidden;
     display: grid;
     min-height: 100vh;
     grid-template-rows: 3fr 2fr;

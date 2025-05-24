@@ -42,4 +42,6 @@ function addAgent() {
     select.appendChild(opAgent)
 
     formAgent.reset()
+
+    drawChart()
 }

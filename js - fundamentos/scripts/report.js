@@ -34,4 +34,6 @@ function addReport() {
     tableReport.appendChild(lineReport)
 
     formReport.reset()
+
+    drawChart()
 }

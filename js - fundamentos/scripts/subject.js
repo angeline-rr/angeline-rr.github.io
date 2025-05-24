@@ -34,4 +34,6 @@ function addSubject() {
     select.appendChild(opSubject)
 
     formSubject.reset()
+
+    drawChart()
 }

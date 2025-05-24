@@ -39,4 +39,6 @@ function addRegional(){
     select.appendChild(op)
 
     formRegional.reset()
+
+    drawChart()
 }
