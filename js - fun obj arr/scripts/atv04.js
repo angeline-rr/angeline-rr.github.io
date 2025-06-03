@@ -10,12 +10,15 @@ function ex04() {
 }
 
 function resolve04(...args) {
+    const perfectNums = args
+        .map(function (item) {
+            return parseInt(item);
+        })
+        .filter(function (val) {
+            return filter_perfeito(val);
+        });
 
-    const isPerfect = args.map(function (item) {
-        return filter_perfeito(parseInt(item))
-    });
-
-    output.textContent = isPerfect.join(" ")
+    output.textContent = perfectNums.join(" ");
 }
 function filter_perfeito(val) {
     let dividers = []

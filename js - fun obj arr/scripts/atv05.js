@@ -1,16 +1,27 @@
 
 function ex05() {
-    
-    const form = document.querySelector('#form05')
-    const input = form.querySelector('input[name="in_05"]').value
-    alert(input)
-    form.reset()
+
+    const form05 = document.querySelector('#form05')
+    const input05 = form05.querySelector('input[name="in_05"]').value
+
+    const objInput = JSON.parse(input05)
+    resolve05(objInput);
 }
 
-function resolve05(obj) {
+function resolve05(dados) {
+    const objeto = new Construtora(dados)
+
+    const show = []
+
+    for (let key in objeto) {
+        show.push(`${key}: ${objeto[key]}`);
+    }
+
+    output.innerHTML = show.join("<br>");
 
 }
-
-function construtora(data) {
-
+function Construtora(data) {
+    for (let key in data) {
+        this[key] = data[key];
+    };
 }
