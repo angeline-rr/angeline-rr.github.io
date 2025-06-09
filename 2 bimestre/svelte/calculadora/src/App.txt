@@ -1,0 +1,95 @@
+<script>
+  let typedValue = "";
+  let value = (typedVal) => parseInt(typedVal);
+  let total = 0;
+  let operationBeingMade = null;
+
+  function setOperation(operation) {
+    operationBeingMade = operation;
+    total = value(typedValue);
+    typedValue = "";
+  }
+  function showResult() {
+    resolve();
+    typedValue = total.toString();
+  }
+  function resolve() {
+    switch (operationBeingMade) {
+      case "sum":
+        total += value(typedValue);
+        typedValue = "";
+        break;
+      case "subtract":
+        total -= value(typedValue);
+        break;
+      case "multiply":
+        total *= value(typedValue);
+        break;
+      case "divide":
+        total /= value(typedValue);
+        break;
+    }
+  }
+  function clear(){
+    total = 0
+    typedValue = ""
+  }
+</script>
+
+<div class="calculator">
+  <input id="console" type="text" bind:value={typedValue} />
+  <div class="first-row">
+    <button on:click={() => (typedValue += 1)}> 1 </button>
+    <button on:click={() => (typedValue += 2)}> 2 </button>
+    <button on:click={() => (typedValue += 3)}> 3 </button>
+    <button on:click={() => setOperation("sum")}> + </button>
+  </div>
+  <div class="second-row">
+    <button on:click={() => (typedValue += 4)}> 4 </button>
+    <button on:click={() => (typedValue += 5)}> 5 </button>
+    <button on:click={() => (typedValue += 6)}> 6 </button>
+    <button on:click={() => setOperation("subtract")}> - </button>
+  </div>
+  <div class="third-row">
+    <button on:click={() => (typedValue += 7)}> 7 </button>
+    <button on:click={() => (typedValue += 8)}> 8 </button>
+    <button on:click={() => (typedValue += 9)}> 9 </button>
+    <button on:click={() => setOperation("multiply")}> x </button>
+  </div>
+  <div class="last-row">
+    <button on:click={showResult}> = </button>
+    <button on:click={() => (typedValue += 0)}> 0 </button>
+    <button on:click={clean}> C </button>
+    <button on:click={() => setOperation("divide")}> ÷ </button>
+  </div>
+</div>
+
+<style>
+  * {
+    font-size: 25px;
+    color: white;
+  }
+  .calculator {
+    margin-top: 25vh;
+  }
+  input {
+    width: 27vw;
+    height: 8vh;
+    color: rgb(71, 37, 102);
+    outline: 0;
+    border: 3px solid rgb(71, 37, 102);
+    border-radius: 5px;
+  }
+  button {
+    background-color: rgb(71, 37, 102);
+    margin: 5px;
+    width: 6vw;
+    height: 7vh;
+    border: 0;
+    border-radius: 11px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(40, 21, 58);
+  }
+</style>
